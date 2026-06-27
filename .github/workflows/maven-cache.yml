@@ -30,7 +30,8 @@ jobs:
           source: "target/*.war"
           target: "/tmp"
           strip_components: 1
-          - name: Invoke Jenkins Deployment Job
+
+      - name: Invoke Jenkins Deployment Job
         uses: appleboy/jenkins-action@master
         with:
           url: "http://${{ secrets.HOST }}:8080"
